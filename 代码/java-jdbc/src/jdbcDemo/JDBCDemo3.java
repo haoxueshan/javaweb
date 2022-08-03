@@ -74,12 +74,10 @@ private static final String List = null;
 			int id=rs.getInt("id");
 			String name=rs.getString("name");
 			double money=rs.getDouble("money");
-			int balance=rs.getInt("balance");
 
 			account.setId(id);
 			account.setName(name);
 			account.setMoney(money);
-			account.setBalance(balance);
 			list.add(account);
 		}
 		
