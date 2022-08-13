@@ -1,0 +1,2 @@
+0:0:0:0:0:0:0:1 - - [09/Aug/2022:19:58:24 +0800] "GET /filter-demo HTTP/1.1" 302 - http-bio-80-exec-1 0
+0:0:0:0:0:0:0:1 - - [09/Aug/2022:19:58:24 +0800] "GET /filter-demo/ HTTP/1.1" 200 116 http-bio-80-exec-3 56

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>欢迎注册</title>
+    <link href="css/register.css" rel="stylesheet">
+    <style>
+        .center {
+            padding: 70px 0;
+            border: 3px solid green;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<div class="form-div" id="form-div" >
+    <div class="reg-content">
+        <h1>欢迎注册</h1>
+        <span>已有帐号？</span> <a href="login.html">登录</a>
+    </div>
+    <form id="reg-form" >
+
+        <table>
+
+            <tr>
+                <td>用户名</td>
+                <td class="inputs">
+                    <input name="username" type="text" id="username" v-model="users.username">
+                    <br>
+                    <span id="username_err" class="err_msg"  v-model="register_msg">{{register_msg}}</span>
+                </td>
+
+            </tr>
+
+            <tr>
+                <td>密码</td>
+                <td class="inputs">
+                    <input name="password" type="password" id="password" v-model="users.password">
+                    <br>
+                    <span id="password_err" class="err_msg" style="display: none">密码格式有误</span>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td>验证码</td>
+                <td class="inputs">
+                    <input name="checkCode" type="text" id="checkCode" v-model="users.checkCode">
+                    <img :src="curl">
+                    <a href="#" id="changeImg" @click="onSubmit">看不清？</a>
+                </td>
+            </tr>
+
+        </table>
+        <el-button type="primary" @click="subs">注册</el-button>
+<!--        <div class="buttons" >-->
+<!--            <input value="注 册" type="submit" id="reg_btn" @click="sub">-->
+<!--        </div>-->
+<!--        <br class="clear">-->
+    </form>
+
+    <script src="js/vue.js"></script>
+    <script src="element-ui/lib/index.js"></script>
+    <link rel="stylesheet" href="element-ui/lib/theme-chalk/index.css">
+    <script src="js/axios-0.18.0.js"></script>
+    <script>
+        new Vue ({
+                el: "#form-div",
+                mounted() {
+                },
+                methods: {
+                    subs(){
+                        axios({
+                            method:"post",
+                            url:"http://localhost:80/brand-case/brand/registerServlet",
+                            data:this.users,
+                        }).then(resp=>{
+                            this.register_msg=resp.data.register_msg;
+                        })
+                    },
+                    onSubmit() {
+                        this.curl="/brand-case/brand/checkCodeServlet?"+new Date().getMilliseconds();
+                    }
+
+
+                },
+                data() {
+                    return {
+                        curl:"/brand-case/brand/checkCodeServlet",
+                        register_msg:'',
+                        users: {
+                            username:'',
+                            password:'',
+                            checkCode:''
+                        }
+                    }
+                }
+
+            }
+
+        )
+
+    </script>
+
+</div>
+</body>
+</html>

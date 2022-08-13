@@ -1,0 +1,15 @@
+0:0:0:0:0:0:0:1 - - [09/Aug/2022:21:58:32 +0800] "GET /brand-demo HTTP/1.1" 302 - http-bio-8080-exec-1 0
+0:0:0:0:0:0:0:1 - - [09/Aug/2022:21:58:32 +0800] "GET /brand-demo/ HTTP/1.1" 404 973 http-bio-8080-exec-3 16
+0:0:0:0:0:0:0:1 - - [09/Aug/2022:21:58:46 +0800] "GET /brand-demo/selectAllServlet HTTP/1.1" 500 6893 http-bio-8080-exec-4 287
+0:0:0:0:0:0:0:1 - - [09/Aug/2022:22:00:28 +0800] "GET /brand-demo HTTP/1.1" 302 - http-bio-8080-exec-1 0
+0:0:0:0:0:0:0:1 - - [09/Aug/2022:22:00:28 +0800] "GET /brand-demo/ HTTP/1.1" 404 973 http-bio-8080-exec-3 12
+0:0:0:0:0:0:0:1 - - [09/Aug/2022:22:00:33 +0800] "GET /brand-demo/selectAllServlet HTTP/1.1" 200 485 http-bio-8080-exec-4 479
+0:0:0:0:0:0:0:1 - - [09/Aug/2022:22:01:14 +0800] "GET /brand-demo HTTP/1.1" 302 - http-bio-8080-exec-1 0
+0:0:0:0:0:0:0:1 - - [09/Aug/2022:22:01:14 +0800] "GET /brand-demo/ HTTP/1.1" 404 973 http-bio-8080-exec-3 12
+0:0:0:0:0:0:0:1 - - [09/Aug/2022:22:01:20 +0800] "GET /brand-demo/selectAllServlet HTTP/1.1" 200 485 http-bio-8080-exec-4 402
+0:0:0:0:0:0:0:1 - - [09/Aug/2022:22:15:08 +0800] "GET /brand-demo/selectAllServlet HTTP/1.1" 200 485 http-bio-8080-exec-1 493
+0:0:0:0:0:0:0:1 - - [09/Aug/2022:22:15:10 +0800] "GET /brand-demo/selectAllServlet HTTP/1.1" 200 485 http-bio-8080-exec-3 6
+0:0:0:0:0:0:0:1 - - [09/Aug/2022:22:15:11 +0800] "GET /brand-demo/selectAllServlet HTTP/1.1" 200 485 http-bio-8080-exec-4 4
+0:0:0:0:0:0:0:1 - - [09/Aug/2022:22:15:26 +0800] "GET /brand-demo/brand.html HTTP/1.1" 200 1767 http-bio-8080-exec-5 3
+0:0:0:0:0:0:0:1 - - [09/Aug/2022:22:15:26 +0800] "GET /brand-demo/js/axios-0.18.0.js HTTP/1.1" 200 12948 http-bio-8080-exec-6 3
+0:0:0:0:0:0:0:1 - - [09/Aug/2022:22:15:26 +0800] "GET /brand-demo/selectAllServlet HTTP/1.1" 200 485 http-bio-8080-exec-7 3
